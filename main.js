@@ -2,7 +2,7 @@ const typed = new Typed('.typed', {
     strings: [
         '<i class = "me">Game Developer</i>', 
         '<i class = "me">AI Learner</i>',
-        '<i class = "me">Software Engineering Student</i>'],
+        '<i class = "me">Computer and Systems Engineering Student</i>'],
     typeSpeed: 75,
     startDelay: 300,
     backSpeed: 75,

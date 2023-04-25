@@ -425,24 +425,26 @@ section {
   font-size: 30px;
 }
 
-.contact .form label{
+.contact .info-box{
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20%;
+}
+
+.contact .info-box i {
   color: #eee;
-  margin-bottom: 2%;
-  margin-top: 3%;
+  font-size: 50px;
 }
 
-.contact .btn {
-  margin-top: 5%;
-  background: #2fcbef;
-  border: 0;
-  font-family: 'VT323';
-  font-size: 40px;
+.contact .info-box i:hover {
+  color: #9a99ff;
+  font-size: 70px;
 }
-
-.contact .btn:hover {
-  background: #5856f0;
-}
-
 /*-- ======= Footer ======= --*/
 
 footer a{
