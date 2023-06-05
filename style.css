@@ -6,6 +6,132 @@
     font-display: fallback;
 }
 
+/* Flickering animation */
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+    text-shadow:
+    0 0 7px rgb(246, 162, 212),
+    0 0 10px rgb(246, 162, 212),
+    0 0 21px rgb(246, 162, 212),
+    0 0 42px #f09,
+    0 0 82px #f09,
+    0 0 92px #f09,
+    0 0 102px #f09,
+    0 0 151px #f09;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+
+/* Flickering animation */
+@keyframes flicker_blue {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+    text-shadow:
+    0 0 7px #b1edfa,
+    0 0 10px #b1edfa,
+    0 0 21px #b1edfa,
+    0 0 42px #2fcbef,
+    0 0 82px #2fcbef,
+    0 0 92px #2fcbef,
+    0 0 102px #2fcbef,
+    0 0 151px #2fcbef;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+
+/* Flickering animation */
+@keyframes flicker_blue_box {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+    box-shadow:
+    0 0 7px #b1edfa,
+    0 0 10px #b1edfa,
+    0 0 21px #b1edfa,
+    0 0 42px #2fcbef,
+    0 0 82px #2fcbef,
+    0 0 92px #2fcbef,
+    0 0 102px #2fcbef,
+    0 0 151px #2fcbef;
+  
+  }
+  
+  20%, 24%, 55% {        
+      box-shadow: none;
+  }    
+}
+
+@keyframes pulsate {
+    
+  100% {
+
+    text-shadow:
+    0 0 4px #b1edfa,
+    0 0 11px #b1edfa,
+    0 0 19px #b1edfa,
+    0 0 40px #2fcbef,
+    0 0 80px #2fcbef,
+    0 0 90px #2fcbef,
+    0 0 100px #2fcbef,
+    0 0 150px #2fcbef;
+  
+  }
+  
+  0% {
+
+    text-shadow:
+      0 0 4px #b1edfa,
+      0 0 11px #b1edfa,
+      0 0 19px #b1edfa,
+      0 0 40px #2fcbef,
+      0 0 80px #2fcbef,
+      0 0 90px #2fcbef,
+      0 0 100px #2fcbef,
+      0 0 150px #2fcbef;
+
+}
+}
+
+@keyframes pulsate_pink {
+    
+  100% {
+
+    text-shadow:
+    0 0 4px rgb(246, 162, 212),
+    0 0 11px rgb(246, 162, 212),
+    0 0 19px rgb(246, 162, 212),
+    0 0 40px #f09,
+    0 0 80px #f09,
+    0 0 90px #f09,
+    0 0 100px #f09;
+  
+  }
+  
+  0% {
+
+    text-shadow:
+    0 0 4px rgb(246, 162, 212),
+    0 0 11px rgb(246, 162, 212),
+    0 0 19px rgb(246, 162, 212),
+    0 0 40px #f09,
+    0 0 80px #f09,
+    0 0 90px #f09,
+    0 0 100px #f09;
+
+}
+}
+
 li, p, a, h1, h2, h3, h4, h5, h6, label{
     font-family: 'VT323';
 }
@@ -19,7 +145,22 @@ h1 {
 }
 
 .typed-cursor {
-    color: #2fcbef;
+    color: #fff;
+    animation: flicker_blue 0.11s ease-in-out infinite alternate;
+}
+
+.to-top-btn button{
+  background: #9a99ff!important;
+  color: #fff;
+  border-radius: 100%;
+  font-size: 30px;
+  border: 0;
+  transform: rotateZ(270deg);
+  animation: flicker 0.11s ease-in-out infinite alternate;
+}
+
+.to-top-btn button:hover{
+  font-size: 35px;
 }
 
 /*-- ======= Section ======= --*/
@@ -40,21 +181,16 @@ section {
   font-weight: 700;
   padding: 8px 20px;
   margin: 0;
-  background: #c9c8f0;
   color: #9a99ff;
   display: inline-block;
   text-transform: uppercase;
-  border-radius: 50px;
+  animation: pulsate 0.11s ease-in-out infinite alternate;
 }
 
 .section-title h3 {
   margin: 15px 0 0 0;
   font-size: 32px;
   font-weight: 700;
-}
-
-.section-title h3 span {
-  color: #5E8AB4;
 }
 
 .section-title p {
@@ -69,7 +205,7 @@ section {
     transition: all 0.5s;
     z-index: 997;
     transition: all 0.5s;
-    background: #292929;
+    background: #000;
   }
 
 .logo h1 {
@@ -83,7 +219,12 @@ section {
 /*-- ======= Navigation ======= --*/
 
 .navbar {
-    padding: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 60px;
+  }
+
+.navbar .logo img{
+    height: 65px;
   }
 
 .navbar ul {
@@ -105,10 +246,11 @@ section {
     justify-content: space-between;
     padding: 10px 0 10px 30px;
     font-size: 22px;
-    color: #9a99ff;
+    color: #fff!important;
     text-transform: uppercase;
     white-space: nowrap;
     transition: 0.3s;
+    animation: flicker 1.5s infinite alternate;
   }
 
 .navbar a i,
@@ -134,7 +276,7 @@ section {
 #hero {
     width: 100%;
     height: 100vh;
-    background: url("./Assets/img/hero.jpg") top center;
+    background: url("./Assets/img/hero.png") center;
     background-size: cover;
     position: relative;
   }
@@ -174,12 +316,13 @@ section {
   #hero h6 {
     color: #eee;
     margin-bottom: 50px;
-    font-size: 30px;
+    font-size: 50px;
   }
 
   #hero .hero-container i {
     font-style: normal;
-    color: #2fcbef;
+    color: #fff;
+    animation: pulsate 0.11s ease-in-out infinite alternate;
   }
 
   #hero a {
@@ -235,13 +378,13 @@ section {
   color: #eee;
   font-size: 90px;
   margin-bottom: 10%;
-  background-color: #a5dfec;
 }
 
 .about-me .section-title h4{
   text-align: center;
-  color: #2fcbef;
+  color: #fff;
   font-size: 120px;
+  animation: flicker_blue 1.5s infinite alternate;
 }
 
 .about-me p {
@@ -270,6 +413,7 @@ section {
 
 .about-me .profile-card a i:hover {
   color: #9a99ff;
+  font-size: 30px;
 }
 
 .about-me .info{
@@ -299,10 +443,11 @@ section {
   border: 0;
   font-family: 'VT323';
   font-size: 40px;
+  animation: flicker 1.5s infinite alternate;
 }
 
 .about-me .info .cv-btn:hover {
-  background: #2fcbef;
+  font-size: 45px;
 }
 
 .about-me .icon-box i{
@@ -338,12 +483,14 @@ section {
   color: #eee;
   font-size: 90px;
   margin-bottom: 10%;
+  animation: pulsate_pink 1.5s infinite alternate;
 }
 
 .services .section-title h4{
   text-align: center;
-  color: #9a99ff;
+  color: #fff;
   font-size: 120px;
+  animation: flicker 1.5s infinite alternate;
 }
 
 .services .icon-box {
@@ -369,9 +516,10 @@ section {
 }
 
 .services .icon-box .icon i {
-  color: #5856f0;
+  color: #fff;
   font-size: 28px;
   transition: ease-in-out 0.3s;
+  animation: flicker 0.11s ease-in-out infinite alternate;
 }
 
 .services .icon-box h4 {
@@ -392,24 +540,20 @@ section {
   color: #eee;
 }
 
-.services .icon-box:hover {
-  border-color: #fff;
-  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
-}
-
-.services .icon-box:hover h4 a,
-.services .icon-box:hover .icon i {
+.services .icon-box:hover h4 a {
   color: #c9c8f0;
+  font-size: 30px;
 }
 
-.services .icon-box:hover .icon {
-  border-color: #c9c8f0;
+.services .icon-box:hover .icon i{
+  font-size: 40px;
 }
 
 /*-- ======= Contact ======= --*/
 
 .contact .section-title h4 {
-  color: #2fcbef;
+  color: #fff;
+  animation: flicker_blue 1.5s infinite alternate;
 }
 
 .contact .section-title h2{
@@ -417,7 +561,7 @@ section {
   color: #eee;
   font-size: 90px;
   margin-bottom: 10%;
-  background-color: #a5dfec;
+  animation: pulsate 1.5s infinite alternate;
 }
 
 .contact .section-title p {
@@ -451,15 +595,17 @@ footer a{
   color: #eee;
   margin-right: 3%;
   font-size: 25px;
+  animation: flicker 0.11s ease-in-out infinite alternate;
 }
 
 footer a:hover{
-  color: #2fcbef;
+  font-size: 30px;
 }
 
 footer p {
   color: #eee;
   font-size: 20px;
+  animation: flicker 0.11s ease-in-out infinite alternate;
 }
 
 footer{

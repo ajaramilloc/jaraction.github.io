@@ -7,8 +7,12 @@
 
     <title>Jaraction Developer</title>
 
+    <link rel="apple-touch-icon" href="Assets/img/apple-touch-icon.png">
+    <link rel="icon" href="Assets/img/favicon.ico">
+
     <link rel="stylesheet" href="./style.css">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- ======= Bootstrap ======= -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
@@ -19,6 +23,13 @@
 
 </head>
 <body>
+
+    <!-- ======= To Top Button ======= -->
+    <div class="position-fixed bottom-0 end-0 p-3 to-top-btn">
+      <a href="#header">
+      <button class="btn btn-primary">==></button>
+    </a>
+    </div>
     
     <!-- ======= Header ======= -->
     <header id = 'header'>
@@ -26,18 +37,20 @@
 
           <!-- ======= Navigation ======= -->
 
-          <nav class="navbar navbar-expand-lg navbar-fixed-top">
-            <a class="navbar-brand logo" href="#">/*Jaraction*/</a>
+          <nav class="navbar navbar-expand-lg navbar-fixed-top fixed-top" data-aos="fade-up" data-aos-duration="3000">
+            <a class="navbar-brand logo" href="#">
+              <img src="Assets/img/logo.png" alt="">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#about-me">_about-me</a>
+                  <a class="nav-link neon-text" href="#about-me">_about-me</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#tech-hub">_tech-hub</a>
+                  <a class="nav-link" href="#tech-hub">_my-activities</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#contact">_contact</a>
@@ -51,10 +64,10 @@
 
     <!-- ======= Hero Section ======= -->
   <section id="hero">
-    <div class="hero-container" data-aos="fade-up">
-        <h6>/* Hi, I´m Alejandro */</h6>
-        <h1>I´m a {"<span class="typed"></span>"}</h1>
-        <a href="#about-me"><p>==></p></a>
+    <div class="hero-container">
+        <h6 data-aos="zoom-in" data-aos-duration="3000">/* Hi, I´m Alejandro */</h6>
+        <h1 data-aos="zoom-in" data-aos-duration="3000">I´m a {"<span class="typed"></span>"}</h1>
+        <a data-aos="fade-up" data-aos-duration="3000" href="#about-me"><p>==></p></a>
       
     </div>
   </section><!-- End Hero -->
@@ -63,9 +76,9 @@
   <section class="about-me">
     <div class="container" id="about-me">
 
-        <div class="section-title" data-aos="zoom-in">
-            <h4>{!}</h4>
-            <h2>&ltAbout_Me></h2>
+        <div class="section-title">
+            <h4 data-aos="fade-up">{!}</h4>
+            <h2 data-aos="fade-up">&ltAbout_Me></h2>
         </div>
 
         <div class="container">
@@ -73,10 +86,10 @@
 
             <div class="col ">
               <div class="card profile-card">
-                <div class="ratio ratio-1x1 rounded-circle overflow-hidden">
+                <div data-aos="zoom-in-up" class="ratio ratio-1x1 rounded-circle overflow-hidden">
                   <img src="./Assets/img/alejandro.jpg" class="card-img-top img-cover" alt="Alejandro">
                 </div>
-                <div class="card-body description-card">
+                <div class="card-body description-card" data-aos="zoom-in">
                   <h5 class="card-title">Alejandro Jaramillo</h5>
                   
                   <div class="d-flex container-fluid">
@@ -108,7 +121,7 @@
             </div>
 
             <div class="col">
-              <div class="info">
+              <div class="info" data-aos="zoom-in">
 
                 <div class="tech-list">
                   <h2>Tech Stack</h2>
@@ -138,7 +151,7 @@
             </div>
         </div>
 
-        <div class="row ">
+        <div class="row" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex align-items-stretch description-1">
                 <p>... Hi, I´m a software engineering student at Los Andes University in Bogotá, Colombia. I´m a AI learner, more specific the AI in games, also I´m a game developer in Unity and I have plans to start learning Unreal Engine 5 :P</p>
             </div>
@@ -155,91 +168,92 @@
   <section id="services" class="services">
     <div class="container">
 
-      <div id="tech-hub" class="section-title" data-aos="zoom-in">
-        <h4>{/}</h4>
-        <h2>&ltTech_Hub></h2>
+      <div id="tech-hub" class="section-title">
+        <h4 data-aos="fade-up">{/}</h4>
+        <h2 data-aos="fade-up">&ltMy_Activities></h2>
       </div>
 
-      <div class="row">
+      <div class="row" data-aos="flip-up">
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-          <div class="icon-box" data-aos="zoom-in">
-            <div class="icon"><i class='bx bx-joystick-alt'></i></div>
-            <h4><a href="">Games</a></h4>
-            <p>Here you can find all the games that I´m developing :V.</p>
+          <div class="icon-box" data-aos="flip-up">
+            <div class="icon"><i class='bi bi-headset-vr'></i></div>
+            <h4><a>VR and AR</a></h4>
+            <p>I´m researching the development of VR and AR, with AI</p>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-          <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon"><i class='bx bx-code-block' ></i></div>
-            <h4><a href="">Proyects</a></h4>
-            <p>Here you can find all the proyects I´m working, also all the info if you wanna participate or contribute :D.</p>
+          <div class="icon-box">
+            <div class="icon"><i class='bi bi-motherboard' ></i></div>
+            <h4><a>Computational Models</a></h4>
+            <p>I´m researching the applications of math in computational models, such as Data Science and Criptography.</p>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-          <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon"><i class='bx bx-network-chart' ></i></div>
-            <h4><a href="">AI</a></h4>
-            <p>I´m learning AI algorithms for games, here I gonna upload my exercises and also the proyects :o.</p>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+          <div class="icon-box">
+            <div class="icon"><i class='bi bi-code-slash' ></i></div>
+            <h4><a>Competitive programming</a></h4>
+            <p>I´m training with the IEEE, to compete in the ICPC challenge this year.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 5%;" data-aos="flip-up">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="icon-box">
+            <div class="icon"><i class='bi bi-cpu-fill'></i></div>
+            <h4><a>AI</a></h4>
+            <p>I´m learing ML and LNP, at DeepLearning.AI</p>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon"><i class='bx bx-code-curly' ></i></i></div>
-            <h4><a href="">Competitive programming</a></h4>
-            <p>I´m training for ICPC, here you can find all the exercises and preparation for the competition :P.</p>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+          <div class="icon-box">
+            <div class="icon"><i class='bi bi-currency-bitcoin' ></i></div>
+            <h4><a>Blockchain</a></h4>
+            <p>I´m in a bootcamp by Blockchain Bites, where I'm learning Solidity and the construction of smart contracts.</p>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
-            <div class="icon"><i class='bx bx-book-bookmark' ></i></div>
-            <h4><a href="">Notes</a></h4>
-            <p>Here you can find my notes of different topics as data structures, algorithms, software design, and more !!!.</p>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+          <div class="icon-box">
+            <div class="icon"><i class='bi bi-award-fill' ></i></div>
+            <h4><a>ACM Uniandes</a></h4>
+            <p>Currently I´m the president of the ACM chapter of Los Andes University.</p>
           </div>
         </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box" data-aos="zoom-in" data-aos-delay="500">
-            <div class="icon"><i class='bx bx-joystick' ></i></div>
-            <h4><a href="">Game Studio</a></h4>
-            <p>I´m working to make my own studio, here you can find all the info of the proyect :).</p>
-          </div>
-        </div>
-
       </div>
 
     </div>
 
   <!-- ======= Contact Section ======= -->
-  <section class="contact">
+  <section class="contact" style="margin-top: 10%;">
     <div class="container">
 
-      <div id="contact" class="section-title" data-aos="zoom-in">
-        <h4>{@}</h4>
-        <h2>&ltContact Me></h2>
-        <p>If you wanna be part of my proyects, or want more info, feel free to contact me :)</p>
+      <div id="contact" class="section-title">
+        <h4 data-aos="fade-up">{@}</h4>
+        <h2 data-aos="fade-up">&ltContact Me></h2>
+        <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">If you wanna be part of my proyects, or want more info, feel free to contact me :)</p>
       </div>
 
       <div class="row">
         
         <div class="col-lg-4 col-md-4 col-sm-12 text-center">
           <div class="info-box mb-4">
-            <a href="https://t.me/jaraction" target="_blank"><i class="bi bi-telegram"></i></a>
+            <a data-aos="flip-left" data-aos-duration="1000" href="https://t.me/jaraction" target="_blank"><i class="bi bi-telegram"></i></a>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-4 col-sm-12 text-center">
           <div class="info-box mb-4">
-            <a href="mailto:ing.ajaramilloc@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a>
+            <a data-aos="flip-left" data-aos-duration="1000" href="mailto:ing.ajaramilloc@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-4 col-sm-12 text-center">
           <div class="info-box mb-4">
-            <a href="https://api.whatsapp.com/send?phone=573002137372" target="_blank"><i class="bi bi-whatsapp"></i></a>
+            <a data-aos="flip-left" data-aos-duration="1000" href="https://api.whatsapp.com/send?phone=573002137372" target="_blank"><i class="bi bi-whatsapp"></i></a>
           </div>
         </div>
 
@@ -268,6 +282,12 @@
       </div>
     </div>
   </footer><!-- End Footer -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
 
     <!-- Icons -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
